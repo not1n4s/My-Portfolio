@@ -1,0 +1,16 @@
+export const techStack = [
+  "React",
+  "Tailwind",
+  "Laravel",
+  "Google Ads",
+  "GA4",
+  "GTM",
+  "n8n",
+  "OpenAI",
+  "Gemini",
+  "WhatsApp API",
+  "Meta API",
+  "AWS",
+  "MySQL",
+  "GitHub",
+];

@@ -1,0 +1,11 @@
+{
+  "name": "cognix-systems-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs . 4173",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/server.mjs dist 4174"
+  }
+}
