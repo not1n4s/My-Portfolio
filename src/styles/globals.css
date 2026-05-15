@@ -659,6 +659,135 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.developer-intro {
+  position: relative;
+  overflow: hidden;
+  padding-top: 48px;
+}
+
+.developer-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+.developer-orb {
+  position: absolute;
+  top: 8%;
+  right: 9%;
+  width: min(28vw, 360px);
+  aspect-ratio: 1;
+  border-radius: 58% 42% 44% 56%;
+  opacity: 0.5;
+  pointer-events: none;
+  filter: blur(42px);
+  background:
+    radial-gradient(circle at 34% 34%, rgba(238, 223, 194, 0.22), transparent 30%),
+    radial-gradient(circle at 65% 58%, rgba(199, 162, 106, 0.28), transparent 42%),
+    radial-gradient(circle at 52% 76%, rgba(126, 103, 72, 0.2), transparent 34%);
+}
+
+.developer-intro-copy,
+.developer-focus-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.025)),
+    var(--surface);
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.22);
+}
+
+.developer-intro-copy::before,
+.developer-focus-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0.34;
+  background:
+    radial-gradient(130% 52% at 16% 0%, rgba(255, 255, 255, 0.12), transparent 42%),
+    linear-gradient(115deg, transparent 0%, rgba(238, 223, 194, 0.06) 38%, transparent 70%);
+  transform: translateX(-8%);
+  animation: liquidSurface 16s ease-in-out infinite alternate;
+}
+
+.developer-intro-copy {
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.developer-intro-copy > * {
+  position: relative;
+  z-index: 2;
+}
+
+.developer-greeting {
+  margin: 0 0 16px;
+  color: var(--accent-2);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.65rem, 2.7vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.developer-intro h2 {
+  margin: 0;
+  max-width: 14ch;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 5vw, 5.25rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+
+.developer-description {
+  max-width: 62ch;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.8;
+}
+
+.developer-focus {
+  display: grid;
+  gap: 16px;
+}
+
+.developer-focus-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.developer-focus-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.developer-focus-card span {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.developer-focus-card strong {
+  font-size: 1.08rem;
+}
+
+.developer-focus-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .positioning {
   position: relative;
   min-height: 78vh;
@@ -1405,6 +1534,10 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .developer-grid {
+    grid-template-columns: 1fr;
+  }
+
   .services-grid,
   .metrics-grid,
   .testimonial-grid {
@@ -1517,6 +1650,39 @@ a:focus-visible {
   .hero-copy {
     max-width: 24ch;
     font-size: 1.02rem;
+  }
+
+  .developer-intro {
+    padding-top: 24px;
+  }
+
+  .developer-intro-copy {
+    border-radius: 22px;
+    padding: 24px 20px;
+  }
+
+  .developer-intro h2 {
+    max-width: 10.5ch;
+    font-size: clamp(2.15rem, 9vw, 3.45rem);
+    line-height: 0.96;
+  }
+
+  .developer-description {
+    max-width: 26ch;
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .developer-focus-card {
+    border-radius: 18px;
+    padding: 20px 18px;
+  }
+
+  .developer-orb {
+    top: 4%;
+    right: -14%;
+    width: 64vw;
+    opacity: 0.36;
   }
 
   .section-shell::before {

@@ -6,6 +6,7 @@ import AmbientBackground from "./components/AmbientBackground.js";
 import Loader from "./components/Loader.js";
 import Navbar from "./components/Navbar.js";
 import Hero from "./components/Hero.js";
+import DeveloperIntro from "./components/DeveloperIntro.js";
 import Positioning from "./components/Positioning.js";
 import Services from "./components/Services.js";
 import FeaturedWork from "./components/FeaturedWork.js";
@@ -59,6 +60,7 @@ export default function App() {
       <${Navbar} />
       <main id="top">
         <${Hero} />
+        <${DeveloperIntro} />
         <${Positioning} />
         <${Services} />
         <${FeaturedWork} />
