@@ -1,11 +1,15 @@
 import { html } from "../lib/react.js";
 import { privateContact } from "../data/private-contact.js";
+import BrandLogo from "./BrandLogo.js";
 
 export default function Footer() {
   return html`
     <footer className="footer section-shell">
       <div>
-        <a className="footer-brand" href="#top">Cognix Systems</a>
+        <a className="footer-brand" href="#top">
+          <${BrandLogo} className="brand-logo-footer" />
+          <span>Cognix Systems</span>
+        </a>
         <p>AI, automation, ads, and web systems for businesses that want to move faster.</p>
       </div>
       <div className="footer-links">

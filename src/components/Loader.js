@@ -1,5 +1,6 @@
 import { html, useLayoutEffect, useRef } from "../lib/react.js";
 import { gsap } from "../vendor/gsap/index.js";
+import BrandLogo from "./BrandLogo.js";
 
 export default function Loader() {
   const loaderRef = useRef(null);
@@ -19,6 +20,9 @@ export default function Loader() {
   return html`
     <div className="loader" ref=${loaderRef} aria-label="Loading Cognix Systems">
       <div className="loader-core">
+        <div className="loader-logo-wrap">
+          <${BrandLogo} className="loader-logo-mark" />
+        </div>
         <p className="loader-wordmark">Cognix Systems</p>
         <div className="loader-line" aria-hidden="true">
           <span></span>

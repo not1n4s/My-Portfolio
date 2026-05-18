@@ -46,7 +46,6 @@ export default function Proof() {
           <p className="section-label">Proof</p>
           <h2>Signals that Cognix understands growth, systems, and execution.</h2>
         </div>
-        <p>Placeholder metrics for V1. Each value is intentionally easy to edit later.</p>
       </div>
 
       <div className="metrics-grid">

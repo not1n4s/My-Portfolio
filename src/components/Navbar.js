@@ -1,5 +1,6 @@
 import { html, useState } from "../lib/react.js";
 import { Menu, X } from "./Icons.js";
+import BrandLogo from "./BrandLogo.js";
 
 const links = [
   { label: "Work", href: "#work" },
@@ -17,7 +18,7 @@ export default function Navbar() {
   return html`
     <header className="site-nav" aria-label="Primary navigation">
       <a className="brand-mark" href="#top" onClick=${closeMenu} aria-label="Cognix Systems home">
-        <span className="brand-orb" aria-hidden="true"></span>
+        <${BrandLogo} className="brand-logo-nav" />
         <span>Cognix Systems</span>
       </a>
 
