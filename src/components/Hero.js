@@ -10,7 +10,7 @@ export default function Hero() {
       gsap
         .timeline({ delay: 0.9 })
         .from(".hero-kicker", { opacity: 0, y: 20, duration: 0.55, ease: "power3.out" })
-        .from(".hero-title span", { yPercent: 105, duration: 0.9, stagger: 0.08, ease: "power4.out" }, "-=0.25")
+        .from(".hero-title > span", { yPercent: 105, duration: 0.9, stagger: 0.08, ease: "power4.out" }, "-=0.25")
         .from(".hero-copy", { opacity: 0, y: 24, duration: 0.65, ease: "power3.out" }, "-=0.35")
         .from(".hero-actions a", { opacity: 0, y: 20, duration: 0.55, stagger: 0.08, ease: "power3.out" }, "-=0.35");
 
@@ -42,7 +42,12 @@ export default function Hero() {
       <div className="hero-content">
         <p className="hero-kicker">AI systems. Growth engines. Cleaner operations.</p>
         <h1 id="hero-title" className="hero-title">
-          <span>AI, automation, ads, and web systems built for businesses that want to move faster.</span>
+          <span>
+            AI, automation, ads, and web systems built for
+            <span className="hero-chalk-word">businesses</span>
+            that want to move
+            <span className="hero-chalk-word">faster</span>.
+          </span>
         </h1>
         <p className="hero-copy">
           Cognix Systems helps businesses turn messy operations, weak lead flow, and manual work into

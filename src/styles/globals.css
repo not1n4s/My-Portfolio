@@ -9,6 +9,8 @@
   --accent-2: #eedfc2;
   --accent-3: #7e6748;
   --nav-height: 74px;
+  --font-body: "Instrument Sans", "Segoe UI", sans-serif;
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
 }
 
 * {
@@ -31,7 +33,9 @@ body {
     radial-gradient(circle at 78% 18%, rgba(126, 103, 72, 0.14), transparent 30rem),
     linear-gradient(180deg, #070605 0%, #0b0907 42%, #070605 100%);
   color: var(--text);
-  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-optical-sizing: auto;
   letter-spacing: 0;
 }
 
@@ -226,7 +230,7 @@ a:focus-visible {
 .cta h2 {
   margin: 0;
   max-width: 820px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.1rem, 5vw, 5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -278,6 +282,7 @@ a:focus-visible {
   opacity: 0.42;
   filter: blur(8px);
   animation: liquidSweep 8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .button-primary,
@@ -315,6 +320,7 @@ a:focus-visible {
   transform: skewX(-18deg);
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.58), transparent);
   transition: transform 600ms ease;
+  pointer-events: none;
 }
 
 .shine:hover::after {
@@ -344,7 +350,7 @@ a:focus-visible {
 
 .loader-wordmark {
   margin: 0 0 18px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-display);
   font-size: clamp(1.7rem, 5vw, 3.4rem);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -395,7 +401,7 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -636,7 +642,7 @@ a:focus-visible {
   max-width: 1040px;
   margin: 0;
   overflow: hidden;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-display);
   font-size: clamp(3rem, 9.3vw, 8.8rem);
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -646,6 +652,47 @@ a:focus-visible {
 .hero-title span,
 .positioning-title span {
   display: block;
+}
+
+.hero-chalk-word {
+  position: relative;
+  display: inline-block !important;
+  margin-inline: 0.08em 0.02em;
+  padding-inline: 0.02em;
+  padding-bottom: 0.16em;
+  white-space: nowrap;
+}
+
+.hero-chalk-word::after,
+.hero-chalk-word::before {
+  position: absolute;
+  left: -0.02em;
+  right: -0.05em;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-chalk-word::after {
+  bottom: -0.02em;
+  height: 0.24em;
+  opacity: 0.96;
+  transform: rotate(-1.4deg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 64' preserveAspectRatio='none'%3E%3Cpath d='M9 36 C34 31 59 46 86 39 C115 32 142 47 170 39 C198 31 226 47 254 39 C278 33 298 40 311 36' fill='none' stroke='%23A79B8B' stroke-width='14' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='.88'/%3E%3Cpath d='M11 40 C36 35 61 49 88 42 C116 35 145 49 172 42 C201 35 229 49 257 42 C280 36 298 44 309 40' fill='none' stroke='%23A79B8B' stroke-width='7' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='.42'/%3E%3Cpath d='M18 44 C40 40 65 53 92 46 C119 39 148 52 175 46 C203 40 231 52 259 46 C282 41 299 47 304 44' fill='none' stroke='%23C3B9AC' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='.28' stroke-dasharray='3 6 10 7 5 8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.hero-chalk-word::before {
+  bottom: -0.06em;
+  height: 0.3em;
+  opacity: 0.34;
+  transform: rotate(0.7deg);
+  filter: blur(2.8px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 64' preserveAspectRatio='none'%3E%3Cpath d='M10 38 C33 33 59 47 86 40 C114 33 141 48 169 40 C197 33 224 48 252 40 C278 35 298 43 310 39' fill='none' stroke='%23A79B8B' stroke-width='15' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='.52'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 
 .hero-copy {
@@ -747,7 +794,7 @@ a:focus-visible {
 .developer-greeting {
   margin: 0 0 16px;
   color: var(--accent-2);
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-display);
   font-size: clamp(1.65rem, 2.7vw, 2.5rem);
   font-weight: 600;
   line-height: 1;
@@ -756,7 +803,7 @@ a:focus-visible {
 .developer-intro h2 {
   margin: 0;
   max-width: 14ch;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 5.25rem);
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -951,7 +998,10 @@ a:focus-visible {
 
 .service-card h3 {
   margin: 26px 0 12px;
+  font-family: var(--font-display);
   font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 .service-card p,
@@ -1075,7 +1125,10 @@ a:focus-visible {
 
 .project-content h3 {
   margin: 0 0 12px;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   line-height: 0.95;
 }
 
@@ -1158,7 +1211,10 @@ a:focus-visible {
 
 .process-step h3 {
   margin: 8px 0 10px;
+  font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 .proof {
@@ -1196,7 +1252,10 @@ a:focus-visible {
 .metric-card strong {
   display: block;
   margin-bottom: 18px;
+  font-family: var(--font-display);
   font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
   line-height: 0.9;
 }
 
@@ -1238,7 +1297,10 @@ a:focus-visible {
 .quote {
   margin: 0 0 34px;
   color: #f6efe4;
+  font-family: var(--font-display);
   font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   line-height: 1.65;
 }
 

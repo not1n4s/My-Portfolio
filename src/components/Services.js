@@ -25,7 +25,9 @@ export default function Services() {
       <div className="section-heading">
         <div>
           <p className="section-label">Services</p>
-          <h2>Built around the systems clients actually need.</h2>
+          <h2>
+            Built around the systems clients <span className="hero-chalk-word">actually</span> need.
+          </h2>
         </div>
         <p>
           A compact capability stack for lead generation, operational automation, AI adoption, and premium

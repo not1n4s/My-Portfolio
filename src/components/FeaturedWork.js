@@ -66,7 +66,10 @@ export default function FeaturedWork() {
     <section id="work" className="featured-work" ref=${sectionRef}>
       <div className="work-header section-shell">
         <p className="section-label">Featured Work</p>
-        <h2>Proof-of-build moments for the systems Cognix can create.</h2>
+        <h2>
+          Proof-of-build moments for the systems Cognix can
+          <span className="hero-chalk-word">create</span>.
+        </h2>
       </div>
 
       <div className="work-track" ref=${trackRef}>

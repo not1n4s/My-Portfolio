@@ -44,7 +44,10 @@ export default function Proof() {
       <div className="section-heading">
         <div>
           <p className="section-label">Proof</p>
-          <h2>Signals that Cognix understands growth, systems, and execution.</h2>
+          <h2>
+            Signals that Cognix <span className="hero-chalk-word">understands</span> growth,
+            <span className="hero-chalk-word">systems</span>, and execution.
+          </h2>
         </div>
       </div>
 

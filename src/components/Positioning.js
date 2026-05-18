@@ -44,7 +44,10 @@ export default function Positioning() {
       <div className="positioning-aura" aria-hidden="true"></div>
       <div className="section-label">Positioning</div>
       <h2 className="positioning-title">
-        <span>We design the digital systems behind faster, cleaner business momentum.</span>
+        <span>
+          We design the digital systems behind faster, cleaner business
+          <span className="hero-chalk-word">momentum</span>.
+        </span>
       </h2>
       <div className="capability-grid" aria-label="Core capabilities">
         ${capabilities.map(

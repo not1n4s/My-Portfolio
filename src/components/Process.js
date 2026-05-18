@@ -58,7 +58,10 @@ export default function Process() {
       <div className="section-heading">
         <div>
           <p className="section-label">Process</p>
-          <h2>A clear way to move from problem to working system.</h2>
+          <h2>
+            A clear way to move from <span className="hero-chalk-word">problem</span> to working
+            system.
+          </h2>
         </div>
         <p>Simple enough to move quickly. Structured enough to avoid expensive guesswork.</p>
       </div>
